@@ -1,0 +1,584 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{00AC976A-B44A-4F77-8E07-B8CCF5A2AFEC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KBE</RootNamespace>
+    <AssemblyName>KBE</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=20.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Users\munaf\Documents\ASP.NET AJAX Control Toolkit\Bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\..\Users\munaf\Desktop\S P\KBE Pro\KBE-Knet Docs\OneDrive_1_22-07-2020\API-Libraries\API-Libraries\asp.net\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.AWT.WinForms">
+      <HintPath>..\..\..\Users\munaf\Desktop\S P\KBE Pro\KBE-Knet Docs\OneDrive_1_22-07-2020\API-Libraries\API-Libraries\asp.net\IKVM.AWT.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Beans">
+      <HintPath>..\..\..\Users\munaf\Desktop\S P\KBE Pro\KBE-Knet Docs\OneDrive_1_22-07-2020\API-Libraries\API-Libraries\asp.net\IKVM.OpenJDK.Beans.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Charsets">
+      <HintPath>..\..\..\Users\munaf\Desktop\S P\KBE Pro\KBE-Knet Docs\OneDrive_1_22-07-2020\API-Libraries\API-Libraries\asp.net\IKVM.OpenJDK.Charsets.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Corba">
+      <HintPath>..\..\..\Users\munaf\Desktop\S P\KBE Pro\KBE-Knet Docs\OneDrive_1_22-07-2020\API-Libraries\API-Libraries\asp.net\IKVM.OpenJDK.Corba.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Core">
+      <HintPath>..\..\..\Users\munaf\Desktop\S P\KBE Pro\KBE-Knet Docs\OneDrive_1_22-07-2020\API-Libraries\API-Libraries\asp.net\IKVM.OpenJDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Jdbc">
+      <HintPath>..\..\..\Users\munaf\Desktop\S P\KBE Pro\KBE-Knet Docs\OneDrive_1_22-07-2020\API-Libraries\API-Libraries\asp.net\IKVM.OpenJDK.Jdbc.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Management">
+      <HintPath>..\..\..\Users\munaf\Desktop\S P\KBE Pro\KBE-Knet Docs\OneDrive_1_22-07-2020\API-Libraries\API-Libraries\asp.net\IKVM.OpenJDK.Management.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Media">
+      <HintPath>..\..\..\Users\munaf\Desktop\S P\KBE Pro\KBE-Knet Docs\OneDrive_1_22-07-2020\API-Libraries\API-Libraries\asp.net\IKVM.OpenJDK.Media.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Misc">
+      <HintPath>..\..\..\Users\munaf\Desktop\S P\KBE Pro\KBE-Knet Docs\OneDrive_1_22-07-2020\API-Libraries\API-Libraries\asp.net\IKVM.OpenJDK.Misc.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Naming">
+      <HintPath>..\..\..\Users\munaf\Desktop\S P\KBE Pro\KBE-Knet Docs\OneDrive_1_22-07-2020\API-Libraries\API-Libraries\asp.net\IKVM.OpenJDK.Naming.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Remoting">
+      <HintPath>..\..\..\Users\munaf\Desktop\S P\KBE Pro\KBE-Knet Docs\OneDrive_1_22-07-2020\API-Libraries\API-Libraries\asp.net\IKVM.OpenJDK.Remoting.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Security">
+      <HintPath>..\..\..\Users\munaf\Desktop\S P\KBE Pro\KBE-Knet Docs\OneDrive_1_22-07-2020\API-Libraries\API-Libraries\asp.net\IKVM.OpenJDK.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.SwingAWT">
+      <HintPath>..\..\..\Users\munaf\Desktop\S P\KBE Pro\KBE-Knet Docs\OneDrive_1_22-07-2020\API-Libraries\API-Libraries\asp.net\IKVM.OpenJDK.SwingAWT.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Text">
+      <HintPath>..\..\..\Users\munaf\Desktop\S P\KBE Pro\KBE-Knet Docs\OneDrive_1_22-07-2020\API-Libraries\API-Libraries\asp.net\IKVM.OpenJDK.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Tools">
+      <HintPath>..\..\..\Users\munaf\Desktop\S P\KBE Pro\KBE-Knet Docs\OneDrive_1_22-07-2020\API-Libraries\API-Libraries\asp.net\IKVM.OpenJDK.Tools.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Util">
+      <HintPath>..\..\..\Users\munaf\Desktop\S P\KBE Pro\KBE-Knet Docs\OneDrive_1_22-07-2020\API-Libraries\API-Libraries\asp.net\IKVM.OpenJDK.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.API">
+      <HintPath>..\..\..\Users\munaf\Desktop\S P\KBE Pro\KBE-Knet Docs\OneDrive_1_22-07-2020\API-Libraries\API-Libraries\asp.net\IKVM.OpenJDK.XML.API.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Bind">
+      <HintPath>..\..\..\Users\munaf\Desktop\S P\KBE Pro\KBE-Knet Docs\OneDrive_1_22-07-2020\API-Libraries\API-Libraries\asp.net\IKVM.OpenJDK.XML.Bind.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Crypto">
+      <HintPath>..\..\..\Users\munaf\Desktop\S P\KBE Pro\KBE-Knet Docs\OneDrive_1_22-07-2020\API-Libraries\API-Libraries\asp.net\IKVM.OpenJDK.XML.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Parse">
+      <HintPath>..\..\..\Users\munaf\Desktop\S P\KBE Pro\KBE-Knet Docs\OneDrive_1_22-07-2020\API-Libraries\API-Libraries\asp.net\IKVM.OpenJDK.XML.Parse.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Transform">
+      <HintPath>..\..\..\Users\munaf\Desktop\S P\KBE Pro\KBE-Knet Docs\OneDrive_1_22-07-2020\API-Libraries\API-Libraries\asp.net\IKVM.OpenJDK.XML.Transform.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.WebServices">
+      <HintPath>..\..\..\Users\munaf\Desktop\S P\KBE Pro\KBE-Knet Docs\OneDrive_1_22-07-2020\API-Libraries\API-Libraries\asp.net\IKVM.OpenJDK.XML.WebServices.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.XPath">
+      <HintPath>..\..\..\Users\munaf\Desktop\S P\KBE Pro\KBE-Knet Docs\OneDrive_1_22-07-2020\API-Libraries\API-Libraries\asp.net\IKVM.OpenJDK.XML.XPath.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.Reflection">
+      <HintPath>..\..\..\Users\munaf\Desktop\S P\KBE Pro\KBE-Knet Docs\OneDrive_1_22-07-2020\API-Libraries\API-Libraries\asp.net\IKVM.Reflection.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.Runtime">
+      <HintPath>..\..\..\Users\munaf\Desktop\S P\KBE Pro\KBE-Knet Docs\OneDrive_1_22-07-2020\API-Libraries\API-Libraries\asp.net\IKVM.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.Runtime.JNI">
+      <HintPath>..\..\..\Users\munaf\Desktop\S P\KBE Pro\KBE-Knet Docs\OneDrive_1_22-07-2020\API-Libraries\API-Libraries\asp.net\IKVM.Runtime.JNI.dll</HintPath>
+    </Reference>
+    <Reference Include="ipaypipe">
+      <HintPath>..\..\..\Users\munaf\Desktop\S P\KBE Pro\KBE-Knet Docs\OneDrive_1_22-07-2020\API-Libraries\API-Libraries\asp.net\ipaypipe.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.2\lib\itextsharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itextsharp.xmlworker.5.5.13.2\lib\itextsharp.xmlworker.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2020.0.1.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\packages\SSH.NET.2020.0.1\lib\net40\Renci.SshNet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Linq" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BeneficiaryFormView.aspx" />
+    <Content Include="BeneficiaryList.aspx" />
+    <Content Include="BeneficiaryNew.aspx" />
+    <Content Include="BranchesDetails.aspx" />
+    <Content Include="Checkout_Confirm.aspx" />
+    <Content Include="CivilIDUploads.aspx" />
+    <Content Include="Contact_Us.aspx" />
+    <Content Include="css\bootstrap2.min.css" />
+    <Content Include="Dashboard.aspx" />
+    <Content Include="DocumentsUploads.aspx" />
+    <Content Include="Exchange_Rate.aspx" />
+    <Content Include="FAQPage.aspx" />
+    <Content Include="images\Documents.png" />
+    <Content Include="images\EFTFooter.jpg" />
+    <Content Include="images\EFTRV_bg.jpg" />
+    <Content Include="images\head_logo.jpg" />
+    <Content Include="js\app_DDLSearch.js" />
+    <Content Include="Logout.aspx" />
+    <Content Include="Myprofile.aspx" />
+    <Content Include="Mytransactions.aspx" />
+    <Content Include="NotificationDetails.aspx" />
+    <Content Include="OTPValidate.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="Main.Master" />
+    <Content Include="PageNotFound.aspx" />
+    <Content Include="Password.aspx" />
+    <Content Include="Password_Forgot.aspx" />
+    <Content Include="Password_Reset.aspx" />
+    <Content Include="Payment.aspx" />
+    <Content Include="PaymentError.aspx" />
+    <Content Include="PaymentResponse.aspx" />
+    <Content Include="PaymentResult.aspx" />
+    <Content Include="PromotionBanners.aspx" />
+    <Content Include="SecurityQuestionsValidation.aspx" />
+    <Content Include="Send_Money.aspx" />
+    <Content Include="Signup.aspx" />
+    <Content Include="Fonts\ArialUnicodeMS.ttf" />
+    <Content Include="Fonts\ARIALUNI.TTF" />
+    <None Include="Properties\PublishProfiles\KBE.pubxml">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Resource\keystore.bin" />
+    <Content Include="Resource\resource.cgn" />
+    <Content Include="ResourceLive\keystore.bin" />
+    <Content Include="ResourceLive\resource.cgn" />
+    <Content Include="ResourceTest\keystore.bin" />
+    <Content Include="ResourceTest\resource.cgn" />
+    <Content Include="SFTPKey\id_rsa" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\app.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\demo.css" />
+    <Content Include="css\material-bootstrap-wizard.css" />
+    <Content Include="Global.asax" />
+    <Content Include="images\1.png" />
+    <Content Include="images\2.png" />
+    <Content Include="images\3.png" />
+    <Content Include="images\4.png" />
+    <Content Include="images\5.png" />
+    <Content Include="images\address.png" />
+    <Content Include="images\arrow.png" />
+    <Content Include="images\bday.png" />
+    <Content Include="images\bell.png" />
+    <Content Include="images\bg-login-page.svg" />
+    <Content Include="images\cart.png" />
+    <Content Include="images\gear.png" />
+    <Content Include="images\idcard.png" />
+    <Content Include="images\illustration.svg" />
+    <Content Include="images\images.png" />
+    <Content Include="images\ind.png" />
+    <Content Include="images\iran.png" />
+    <Content Include="images\kwd.png" />
+    <Content Include="images\loginbg - Copy.svg" />
+    <Content Include="images\loginbg.svg" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\logo.svg" />
+    <Content Include="images\logo1.png" />
+    <Content Include="images\logo11.png" />
+    <Content Include="images\logout.png" />
+    <Content Include="images\logo_20.svg" />
+    <Content Include="images\point.png" />
+    <Content Include="images\profile-3.jpg" />
+    <Content Include="images\profile-4.jpg" />
+    <Content Include="images\profile-5.jpg" />
+    <Content Include="images\sa.png" />
+    <Content Include="images\settings.png" />
+    <Content Include="images\supermarket.png" />
+    <Content Include="images\tr.png" />
+    <Content Include="images\uae.png" />
+    <Content Include="images\user.png" />
+    <Content Include="images\va.png" />
+    <Content Include="Index.aspx" />
+    <Content Include="js\app.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquery-2.2.4.min.js" />
+    <Content Include="js\jquery.bootstrap.js" />
+    <Content Include="js\jquery.validate.min.js" />
+    <Content Include="js\material-bootstrap-wizard.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_GlobalResources\Lang.ar-KW.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Lang.ar-KW.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Lang.en-US.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Lang.en-US.resx</DependentUpon>
+    </Compile>
+    <Compile Include="BeneficiaryFormView.aspx.cs">
+      <DependentUpon>BeneficiaryFormView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BeneficiaryFormView.aspx.designer.cs">
+      <DependentUpon>BeneficiaryFormView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BeneficiaryList.aspx.cs">
+      <DependentUpon>BeneficiaryList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BeneficiaryList.aspx.designer.cs">
+      <DependentUpon>BeneficiaryList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BeneficiaryNew.aspx.cs">
+      <DependentUpon>BeneficiaryNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BeneficiaryNew.aspx.designer.cs">
+      <DependentUpon>BeneficiaryNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BranchesDetails.aspx.cs">
+      <DependentUpon>BranchesDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BranchesDetails.aspx.designer.cs">
+      <DependentUpon>BranchesDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout_Confirm.aspx.cs">
+      <DependentUpon>Checkout_Confirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Checkout_Confirm.aspx.designer.cs">
+      <DependentUpon>Checkout_Confirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CivilIDUploads.aspx.cs">
+      <DependentUpon>CivilIDUploads.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CivilIDUploads.aspx.designer.cs">
+      <DependentUpon>CivilIDUploads.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact_Us.aspx.cs">
+      <DependentUpon>Contact_Us.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact_Us.aspx.designer.cs">
+      <DependentUpon>Contact_Us.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentsUploads.aspx.cs">
+      <DependentUpon>DocumentsUploads.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DocumentsUploads.aspx.designer.cs">
+      <DependentUpon>DocumentsUploads.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Exchange_Rate.aspx.cs">
+      <DependentUpon>Exchange_Rate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Exchange_Rate.aspx.designer.cs">
+      <DependentUpon>Exchange_Rate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FAQPage.aspx.cs">
+      <DependentUpon>FAQPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FAQPage.aspx.designer.cs">
+      <DependentUpon>FAQPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main.Master.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main.Master.designer.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CommonClass.cs" />
+    <Compile Include="Myprofile.aspx.cs">
+      <DependentUpon>Myprofile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Myprofile.aspx.designer.cs">
+      <DependentUpon>Myprofile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mytransactions.aspx.cs">
+      <DependentUpon>Mytransactions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mytransactions.aspx.designer.cs">
+      <DependentUpon>Mytransactions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NotificationDetails.aspx.cs">
+      <DependentUpon>NotificationDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NotificationDetails.aspx.designer.cs">
+      <DependentUpon>NotificationDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OTPValidate.aspx.cs">
+      <DependentUpon>OTPValidate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OTPValidate.aspx.designer.cs">
+      <DependentUpon>OTPValidate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageNotFound.aspx.cs">
+      <DependentUpon>PageNotFound.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageNotFound.aspx.designer.cs">
+      <DependentUpon>PageNotFound.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Password.aspx.cs">
+      <DependentUpon>Password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Password.aspx.designer.cs">
+      <DependentUpon>Password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Password_Forgot.aspx.cs">
+      <DependentUpon>Password_Forgot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Password_Forgot.aspx.designer.cs">
+      <DependentUpon>Password_Forgot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Password_Reset.aspx.cs">
+      <DependentUpon>Password_Reset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Password_Reset.aspx.designer.cs">
+      <DependentUpon>Password_Reset.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payment.aspx.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payment.aspx.designer.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentError.aspx.cs">
+      <DependentUpon>PaymentError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaymentError.aspx.designer.cs">
+      <DependentUpon>PaymentError.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentResponse.aspx.cs">
+      <DependentUpon>PaymentResponse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaymentResponse.aspx.designer.cs">
+      <DependentUpon>PaymentResponse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentResult.aspx.cs">
+      <DependentUpon>PaymentResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaymentResult.aspx.designer.cs">
+      <DependentUpon>PaymentResult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PromotionBanners.aspx.cs">
+      <DependentUpon>PromotionBanners.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PromotionBanners.aspx.designer.cs">
+      <DependentUpon>PromotionBanners.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RESTFull\RESTClass.cs" />
+    <Compile Include="RESTFull\UpdateREST.cs" />
+    <Compile Include="SecurityQuestionsValidation.aspx.cs">
+      <DependentUpon>SecurityQuestionsValidation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SecurityQuestionsValidation.aspx.designer.cs">
+      <DependentUpon>SecurityQuestionsValidation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Send_Money.aspx.cs">
+      <DependentUpon>Send_Money.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Send_Money.aspx.designer.cs">
+      <DependentUpon>Send_Money.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Signup.aspx.cs">
+      <DependentUpon>Signup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Signup.aspx.designer.cs">
+      <DependentUpon>Signup.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="CIDTemp\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App_GlobalResources\Lang.ar-KW.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Lang.ar-KW.designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App_GlobalResources\Lang.en-US.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Lang.en-US.designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53980</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:53980/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+          <servers defaultServer="SelfHostServer">
+            <server name="SelfHostServer" exePath="" cmdArgs="" url="http://localhost:53980/" workingDir="" />
+          </servers>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
